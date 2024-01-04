@@ -1,3 +1,3 @@
 # a311
 
-This repo contains the scripts used in the Protected Areas Connectivity project for Environment and Climate Change Canada.
+Contains the scripts used in the project **Protected Areas Connectivity** for Environment and Climate Change Canada.
