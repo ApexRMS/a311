@@ -7,5 +7,12 @@
 /Outputs
 /Figures
 /SyncroSim & R environments
-/Libraries
+/Libraries/Inputs/stconnect v1.1.1
+/Libraries/*.ssim.input
+/Libraries/*.ssim.output
+/Libraries/*.ssim.backup
+/Libraries/*.ssim.temp
+
+# Files
+*.ssim
 
