@@ -454,6 +454,7 @@ benchmarkFolder <- folder(stconnectProject, folder = "Benchmark",
 # 2010-2011, 1 iteration, historic ----
 
 # Set common dependencies
+# NOTE: integers reflect scenario IDs
 coreDependencies <- c(1, 2, 4, 5, 6, 8, 9, 13, 14, 15, 16, 17)
 
 # Agnostic
@@ -481,6 +482,7 @@ targetScenario <- create_fullscenario(
 # 2010-2060, 1 iteration, historic ----
 
 # Set common dependencies
+# NOTE: integers reflect scenario IDs
 coreDependencies <- c(1, 3, 4, 5, 6, 8, 9, 13, 14, 15, 16, 17)
 
 # Agnostic
@@ -508,6 +510,7 @@ targetScenario <- create_fullscenario(
 # 2010-2060, 1 iteration, 0.5x urbanization ---
 
 # Set common dependencies
+# NOTE: integers reflect scenario IDs
 coreDependencies <- c(1, 3, 4, 5, 7, 8, 9, 13, 14, 15, 16, 17)
 
 # Agnostic
