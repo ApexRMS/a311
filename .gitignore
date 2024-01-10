@@ -12,6 +12,7 @@
 /Libraries/*.ssim.output
 /Libraries/*.ssim.backup
 /Libraries/*.ssim.temp
+/Libraries/*.ssim.publish
 
 # Files
 *.ssim
