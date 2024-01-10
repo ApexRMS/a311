@@ -1,0 +1,8 @@
+TransitionGroupID,StateClassID,StateAttributeTypeID,NeighborhoodRadius,UpdateFrequency
+Agriculture->Urban [Type],,Urban,130,1
+Forest->Agriculture,,Agriculture,130,1
+Forest->Urban,,Urban,130,1
+Wetland:Forested->Agriculture [Type],,Agriculture,130,1
+Wetland:Forested->Urban [Type],,Urban,130,1
+Wetland:Open->Agriculture [Type],,Agriculture,130,1
+Wetland:Open->Urban [Type],,Urban,130,1

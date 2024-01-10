@@ -1,0 +1,211 @@
+Iteration,Timestep,SpeciesID,StateClassID,AgeMin,AgeMax,Value
+,,American Marten,Agriculture:All,,,16
+,,American Marten,Forest:Coniferous Medium,,,2
+,,American Marten,Forest:Coniferous Old,,,2
+,,American Marten,Forest:Coniferous Young,,,2
+,,American Marten,Forest:Deciduous Medium,,,4
+,,American Marten,Forest:Deciduous Old,,,4
+,,American Marten,Forest:Deciduous Young,,,4
+,,American Marten,Forest:Mixed Medium,,,4
+,,American Marten,Forest:Mixed Old,,,4
+,,American Marten,Forest:Mixed Young,,,4
+,,American Marten,Road:All,,,32
+,,American Marten,Urban:All,,,32
+,,American Marten,Water:All,,,16
+,,American Marten,Wetland:Forested,,,8
+,,American Marten,Wetland:Open,,,8
+,,American toad,Agriculture:All,,,8
+,,American toad,Forest:Coniferous Medium,,,2
+,,American toad,Forest:Coniferous Old,,,2
+,,American toad,Forest:Coniferous Young,,,2
+,,American toad,Forest:Deciduous Medium,,,2
+,,American toad,Forest:Deciduous Old,,,2
+,,American toad,Forest:Deciduous Young,,,2
+,,American toad,Forest:Mixed Medium,,,2
+,,American toad,Forest:Mixed Old,,,2
+,,American toad,Forest:Mixed Young,,,2
+,,American toad,Road:All,,,32
+,,American toad,Urban:All,,,32
+,,American toad,Water:All,,,8
+,,American toad,Wetland:Forested,,,2
+,,American toad,Wetland:Open,,,2
+,,American Woodcock,Agriculture:All,,,8
+,,American Woodcock,Forest:Coniferous Medium,,,2
+,,American Woodcock,Forest:Coniferous Old,,,2
+,,American Woodcock,Forest:Coniferous Young,,,2
+,,American Woodcock,Forest:Deciduous Medium,,,2
+,,American Woodcock,Forest:Deciduous Old,,,2
+,,American Woodcock,Forest:Deciduous Young,,,2
+,,American Woodcock,Forest:Mixed Medium,,,2
+,,American Woodcock,Forest:Mixed Old,,,2
+,,American Woodcock,Forest:Mixed Young,,,2
+,,American Woodcock,Road:All,,,16
+,,American Woodcock,Urban:All,,,16
+,,American Woodcock,Water:All,,,16
+,,American Woodcock,Wetland:Forested,,,2
+,,American Woodcock,Wetland:Open,,,2
+,,Barred Owl,Agriculture:All,,,4
+,,Barred Owl,Forest:Coniferous Medium,,,2
+,,Barred Owl,Forest:Coniferous Old,,,2
+,,Barred Owl,Forest:Coniferous Young,,,2
+,,Barred Owl,Forest:Deciduous Medium,,,2
+,,Barred Owl,Forest:Deciduous Old,,,2
+,,Barred Owl,Forest:Deciduous Young,,,2
+,,Barred Owl,Forest:Mixed Medium,,,2
+,,Barred Owl,Forest:Mixed Old,,,2
+,,Barred Owl,Forest:Mixed Young,,,2
+,,Barred Owl,Road:All,,,16
+,,Barred Owl,Urban:All,,,16
+,,Barred Owl,Water:All,,,4
+,,Barred Owl,Wetland:Forested,,,2
+,,Barred Owl,Wetland:Open,,,2
+,,Black Bear,Agriculture:All,,,16
+,,Black Bear,Forest:Coniferous Medium,,,4
+,,Black Bear,Forest:Coniferous Old,,,4
+,,Black Bear,Forest:Coniferous Young,,,4
+,,Black Bear,Forest:Deciduous Medium,,,4
+,,Black Bear,Forest:Deciduous Old,,,4
+,,Black Bear,Forest:Deciduous Young,,,4
+,,Black Bear,Forest:Mixed Medium,,,4
+,,Black Bear,Forest:Mixed Old,,,4
+,,Black Bear,Forest:Mixed Young,,,4
+,,Black Bear,Road:All,,,32
+,,Black Bear,Urban:All,,,32
+,,Black Bear,Water:All,,,16
+,,Black Bear,Wetland:Forested,,,2
+,,Black Bear,Wetland:Open,,,2
+,,Ovenbird,Agriculture:All,,,8
+,,Ovenbird,Forest:Coniferous Medium,,,2
+,,Ovenbird,Forest:Coniferous Old,,,2
+,,Ovenbird,Forest:Coniferous Young,,,2
+,,Ovenbird,Forest:Deciduous Medium,,,2
+,,Ovenbird,Forest:Deciduous Old,,,2
+,,Ovenbird,Forest:Deciduous Young,,,2
+,,Ovenbird,Forest:Mixed Medium,,,2
+,,Ovenbird,Forest:Mixed Old,,,2
+,,Ovenbird,Forest:Mixed Young,,,2
+,,Ovenbird,Road:All,,,16
+,,Ovenbird,Urban:All,,,16
+,,Ovenbird,Water:All,,,16
+,,Ovenbird,Wetland:Forested,,,4
+,,Ovenbird,Wetland:Open,,,4
+,,Pileated Woodpecker,Agriculture:All,,,8
+,,Pileated Woodpecker,Forest:Coniferous Medium,,,2
+,,Pileated Woodpecker,Forest:Coniferous Old,,,2
+,,Pileated Woodpecker,Forest:Coniferous Young,,,2
+,,Pileated Woodpecker,Forest:Deciduous Medium,,,2
+,,Pileated Woodpecker,Forest:Deciduous Old,,,2
+,,Pileated Woodpecker,Forest:Deciduous Young,,,2
+,,Pileated Woodpecker,Forest:Mixed Medium,,,2
+,,Pileated Woodpecker,Forest:Mixed Old,,,2
+,,Pileated Woodpecker,Forest:Mixed Young,,,2
+,,Pileated Woodpecker,Road:All,,,16
+,,Pileated Woodpecker,Urban:All,,,16
+,,Pileated Woodpecker,Water:All,,,8
+,,Pileated Woodpecker,Wetland:Forested,,,2
+,,Pileated Woodpecker,Wetland:Open,,,2
+,,Red Backed Salamander,Agriculture:All,,,8
+,,Red Backed Salamander,Forest:Coniferous Medium,,,2
+,,Red Backed Salamander,Forest:Coniferous Old,,,2
+,,Red Backed Salamander,Forest:Coniferous Young,,,2
+,,Red Backed Salamander,Forest:Deciduous Medium,,,2
+,,Red Backed Salamander,Forest:Deciduous Old,,,2
+,,Red Backed Salamander,Forest:Deciduous Young,,,2
+,,Red Backed Salamander,Forest:Mixed Medium,,,2
+,,Red Backed Salamander,Forest:Mixed Old,,,2
+,,Red Backed Salamander,Forest:Mixed Young,,,2
+,,Red Backed Salamander,Road:All,,,32
+,,Red Backed Salamander,Urban:All,,,32
+,,Red Backed Salamander,Water:All,,,32
+,,Red Backed Salamander,Wetland:Forested,,,8
+,,Red Backed Salamander,Wetland:Open,,,8
+,,Red-breasted Nuthatch,Agriculture:All,,,8
+,,Red-breasted Nuthatch,Forest:Coniferous Medium,,,2
+,,Red-breasted Nuthatch,Forest:Coniferous Old,,,2
+,,Red-breasted Nuthatch,Forest:Coniferous Young,,,2
+,,Red-breasted Nuthatch,Forest:Deciduous Medium,,,2
+,,Red-breasted Nuthatch,Forest:Deciduous Old,,,2
+,,Red-breasted Nuthatch,Forest:Deciduous Young,,,2
+,,Red-breasted Nuthatch,Forest:Mixed Medium,,,2
+,,Red-breasted Nuthatch,Forest:Mixed Old,,,2
+,,Red-breasted Nuthatch,Forest:Mixed Young,,,2
+,,Red-breasted Nuthatch,Road:All,,,16
+,,Red-breasted Nuthatch,Urban:All,,,16
+,,Red-breasted Nuthatch,Water:All,,,16
+,,Red-breasted Nuthatch,Wetland:Forested,,,4
+,,Red-breasted Nuthatch,Wetland:Open,,,4
+,,Short-tailed Shrew,Agriculture:All,,,8
+,,Short-tailed Shrew,Forest:Coniferous Medium,,,2
+,,Short-tailed Shrew,Forest:Coniferous Old,,,2
+,,Short-tailed Shrew,Forest:Coniferous Young,,,2
+,,Short-tailed Shrew,Forest:Deciduous Medium,,,2
+,,Short-tailed Shrew,Forest:Deciduous Old,,,2
+,,Short-tailed Shrew,Forest:Deciduous Young,,,2
+,,Short-tailed Shrew,Forest:Mixed Medium,,,2
+,,Short-tailed Shrew,Forest:Mixed Old,,,2
+,,Short-tailed Shrew,Forest:Mixed Young,,,2
+,,Short-tailed Shrew,Road:All,,,32
+,,Short-tailed Shrew,Urban:All,,,32
+,,Short-tailed Shrew,Water:All,,,16
+,,Short-tailed Shrew,Wetland:Forested,,,8
+,,Short-tailed Shrew,Wetland:Open,,,8
+,,Snowshoe Hare,Agriculture:All,,,8
+,,Snowshoe Hare,Forest:Coniferous Medium,,,2
+,,Snowshoe Hare,Forest:Coniferous Old,,,2
+,,Snowshoe Hare,Forest:Coniferous Young,,,2
+,,Snowshoe Hare,Forest:Deciduous Medium,,,2
+,,Snowshoe Hare,Forest:Deciduous Old,,,2
+,,Snowshoe Hare,Forest:Deciduous Young,,,2
+,,Snowshoe Hare,Forest:Mixed Medium,,,2
+,,Snowshoe Hare,Forest:Mixed Old,,,2
+,,Snowshoe Hare,Forest:Mixed Young,,,2
+,,Snowshoe Hare,Road:All,,,32
+,,Snowshoe Hare,Urban:All,,,32
+,,Snowshoe Hare,Water:All,,,16
+,,Snowshoe Hare,Wetland:Forested,,,4
+,,Snowshoe Hare,Wetland:Open,,,4
+,,White-footed Mouse,Agriculture:All,,,8
+,,White-footed Mouse,Forest:Coniferous Medium,,,2
+,,White-footed Mouse,Forest:Coniferous Old,,,2
+,,White-footed Mouse,Forest:Coniferous Young,,,2
+,,White-footed Mouse,Forest:Deciduous Medium,,,2
+,,White-footed Mouse,Forest:Deciduous Old,,,2
+,,White-footed Mouse,Forest:Deciduous Young,,,2
+,,White-footed Mouse,Forest:Mixed Medium,,,2
+,,White-footed Mouse,Forest:Mixed Old,,,2
+,,White-footed Mouse,Forest:Mixed Young,,,2
+,,White-footed Mouse,Road:All,,,32
+,,White-footed Mouse,Urban:All,,,32
+,,White-footed Mouse,Water:All,,,16
+,,White-footed Mouse,Wetland:Forested,,,2
+,,White-footed Mouse,Wetland:Open,,,2
+,,White-tailed  Deer,Agriculture:All,,,8
+,,White-tailed  Deer,Forest:Coniferous Medium,,,2
+,,White-tailed  Deer,Forest:Coniferous Old,,,2
+,,White-tailed  Deer,Forest:Coniferous Young,,,2
+,,White-tailed  Deer,Forest:Deciduous Medium,,,2
+,,White-tailed  Deer,Forest:Deciduous Old,,,2
+,,White-tailed  Deer,Forest:Deciduous Young,,,2
+,,White-tailed  Deer,Forest:Mixed Medium,,,2
+,,White-tailed  Deer,Forest:Mixed Old,,,2
+,,White-tailed  Deer,Forest:Mixed Young,,,2
+,,White-tailed  Deer,Road:All,,,32
+,,White-tailed  Deer,Urban:All,,,32
+,,White-tailed  Deer,Water:All,,,8
+,,White-tailed  Deer,Wetland:Forested,,,4
+,,White-tailed  Deer,Wetland:Open,,,4
+,,Wood Frog,Agriculture:All,,,8
+,,Wood Frog,Forest:Coniferous Medium,,,2
+,,Wood Frog,Forest:Coniferous Old,,,2
+,,Wood Frog,Forest:Coniferous Young,,,2
+,,Wood Frog,Forest:Deciduous Medium,,,2
+,,Wood Frog,Forest:Deciduous Old,,,2
+,,Wood Frog,Forest:Deciduous Young,,,2
+,,Wood Frog,Forest:Mixed Medium,,,2
+,,Wood Frog,Forest:Mixed Old,,,2
+,,Wood Frog,Forest:Mixed Young,,,2
+,,Wood Frog,Road:All,,,32
+,,Wood Frog,Urban:All,,,32
+,,Wood Frog,Water:All,,,8
+,,Wood Frog,Wetland:Forested,,,2
+,,Wood Frog,Wetland:Open,,,2

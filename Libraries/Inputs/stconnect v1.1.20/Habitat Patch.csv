@@ -1,0 +1,15 @@
+Iteration,Timestep,SpeciesID,HabitatSuitabilityThreshold,MinimumHabitatPatchSize
+,,American Marten,60,150
+,,American toad,60,0.5
+,,American Woodcock,60,2
+,,Barred Owl,60,1
+,,Black Bear,60,1200
+,,Ovenbird,60,5
+,,Pileated Woodpecker,60,1
+,,Red Backed Salamander,60,0.27
+,,Red-breasted Nuthatch,60,3
+,,Short-tailed Shrew,60,1
+,,Snowshoe Hare,60,2
+,,White-footed Mouse,60,2.4
+,,White-tailed  Deer,60,5
+,,Wood Frog,60,0.5

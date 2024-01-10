@@ -1,0 +1,16 @@
+Name,StateLabelXID,StateLabelYID,ID,Color,Legend,Description,IsAutoName
+Agriculture:All,Agriculture,All,100,"255,255,255,128",,,No
+Forest:Coniferous Medium,Forest,Coniferous Medium,532,"255,0,255,128",,Moyenne forêt de conifères de 30 à 60 ans,Yes
+Forest:Coniferous Old,Forest,Coniferous Old,533,"255,0,255,0",,Vielle forêt de conifères de plus de 60 ans,No
+Forest:Coniferous Young,Forest,Coniferous Young,531,"255,0,0,0",,Jeune forêt de conifères de 0 à 30 ans,No
+Forest:Deciduous Medium,Forest,Deciduous Medium,512,"255,128,128,128",,Moyenne forêt de feuillus de 30 à 60 ans,Yes
+Forest:Deciduous Old,Forest,Deciduous Old,513,"255,255,255,0",,Vielle forêt de feuillus de plus de 60 ans,No
+Forest:Deciduous Young,Forest,Deciduous Young,511,"255,192,192,192",,Jeune forêt de feuillus de 0 à 30 ans,No
+Forest:Mixed Medium,Forest,Mixed Medium,522,"255,255,128,0",,Moyenne forêt mixte de 30 à 60 ans,Yes
+Forest:Mixed Old,Forest,Mixed Old,523,"255,255,0,0",,Vielle forêt mixte de plus de 60 ans,No
+Forest:Mixed Young,Forest,Mixed Young,521,"255,255,128,128",,Jeune forêt mixte de 0 à 30 ans,Yes
+Road:All,Road,All,410,"255,0,0,0",,,No
+Urban:All,Urban,All,400,"255,128,0,255",,,No
+Water:All,Water,All,700,"255,0,128,255",,,No
+Wetland:Forested,Wetland,Forested,810,"255,128,128,0",,,No
+Wetland:Open,Wetland,Open,800,"255,128,64,0",,,No

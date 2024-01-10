@@ -1,0 +1,9 @@
+Name,Description,IsAuto
+Agricultural Expansion and Urbanization,,
+Forest Succession TST,,
+Forest->Agriculture,,
+Forest->Urban,,
+Natural Habitat->Agriculture,,
+Natural Habitat->Urban,,
+Wetland->Agriculture,,
+Wetland->Urban,,
