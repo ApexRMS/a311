@@ -8,11 +8,11 @@
 /Figures
 /SyncroSim & R environments
 /Libraries/Inputs/stconnect v1.1.1
-/Libraries/*.ssim.input
-/Libraries/*.ssim.output
-/Libraries/*.ssim.backup
-/Libraries/*.ssim.temp
-/Libraries/*.ssim.publish
+*.ssim.input
+*.ssim.output
+*.ssim.backup
+*.ssim.temp
+*.ssim.publish
 
 # Files
 *.ssim
