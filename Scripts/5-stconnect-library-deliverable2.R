@@ -2,8 +2,19 @@
 ## Carina Rauen Firkowski 
 ## January 08, 2024
 ##
-## This script generates the stconnect library for the project. 
-
+## This script generates the stconnect library for deliverable 2.
+## The library is available to collaborators from SyncroSim Cloud at 
+## https://cloud.syncrosim.com/carina-firkowski/Protected%20Areas%20Multispecies%20Connectivity%20-%20Mont%C3%A9r%C3%A9gie/map/2?variable=stsim_sc&timestep=2010&scenario=30
+##
+## NOTE: In order to run this script, please review line 45 to properly setup
+##       the path to the Julia software on your machine.
+##       Additionally, the paths to input data used in this script assume the 
+##       working directory is set to "C:/gitprojects/A311". If setting a  
+##       different working directory, make sure to update the following files:
+##          - Initial Conditions Spatial Files.csv
+##          - Transition Spatial Multipliers - Agnostic.csv
+##          - Transition Spatial Multipliers - Zonation.csv
+##          - Transition Spatial Multipliers - Prioritizr.csv
 
 
 # Load constants
@@ -19,7 +30,7 @@ stconnectSession <- session()
 # Create a new stconnect Library
 stconnectLibrary <- ssimLibrary(
   name = file.path(libraryDir, 
-                   "a311-stconnect-deliverable2-12Jan2024-rsyncrosim.ssim"),
+                   "a311-stconnect-12Jan2024-deliverable2.ssim"),
   session = stconnectSession, overwrite = TRUE,
   package = "stconnect")
 
@@ -533,13 +544,6 @@ targetScenario <- create_fullscenario(
   destinationFolder = benchmarkFolder,
   dependenciesCore = coreDependencies,
   dependenciesUnique = 12)
-
-
-# Analysis scenarios -----------------------------
-
-# Create nested folders
-analysisFolder <- folder(stconnectProject, folder = "Analysis",
-                         parentFolder = fullScenarioFolder)
 
 
 
