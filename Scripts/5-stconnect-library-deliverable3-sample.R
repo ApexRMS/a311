@@ -7,7 +7,7 @@
 ## land cover, habitat suitability, and connectivity for the 14 focal species.
 ##
 ## The library is available to collaborators from SyncroSim Cloud at 
-##
+## https://cloud.syncrosim.com/carina-firkowski/Deliverable%203%20-%20Protected%20Areas%20Multispecies%20Connectivity%20-%20Sample/map/1?variable=stsim_sc&timestep=2060&scenario=21
 ## 
 ## NOTE: In order to run this script, please review line 49 to properly setup
 ##       the path to the Julia software on your machine.
