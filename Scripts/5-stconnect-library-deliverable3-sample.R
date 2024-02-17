@@ -34,8 +34,8 @@ stconnectSession <- session()
 # Create a new stconnect Library
 stconnectLibrary <- ssimLibrary(
   name = file.path(libraryDir, 
-                   "a311-stconnect-deliverable3-16Feb2024-sample.ssim"),
-  session = stconnectSession, overwrite = TRUE,
+                   "a311-stconnect-deliverable3-16Feb2024.ssim"),
+  session = stconnectSession, overwrite = FALSE,
   package = "stconnect")
 
 # Open default Project
@@ -497,6 +497,43 @@ targetScenario <- create_fullscenario(
  destinationFolder = analysisFolder,
  dependenciesCore = coreDependencies,
  dependenciesUnique = 9)
+# Zonation
+targetScenario <- create_fullscenario(
+  scenarioName = "Zonation: 2010-2060; 1 iteration; Historic",
+  destinationFolder = analysisFolder,
+  dependenciesCore = coreDependencies,
+  dependenciesUnique = 10)
+# Prioritizr
+targetScenario <- create_fullscenario(
+  scenarioName = "Prioritizr: 2010-2060; 1 iteration; Historic",
+  destinationFolder = analysisFolder,
+  dependenciesCore = coreDependencies,
+  dependenciesUnique = 11)
+
+# 2010-2060, 1 iteration, 0.5x urbanization
+
+# Set common dependencies
+# NOTE: integers reflect scenario IDs
+coreDependencies <- c(1, 2, 3, 4, 6, 7, 8, 12, 13, 14, 15, 16, 17, 18, 19)
+
+# Agnostic
+targetScenario <- create_fullscenario(
+  scenarioName = "Agnostic: 2010-2060; 1 iteration; 0.5x Urbanization",
+  destinationFolder = analysisFolder,
+  dependenciesCore = coreDependencies,
+  dependenciesUnique = 9)
+# Zonation
+targetScenario <- create_fullscenario(
+  scenarioName = "Zonation: 2010-2060; 1 iteration; 0.5x Urbanization",
+  destinationFolder = analysisFolder,
+  dependenciesCore = coreDependencies,
+  dependenciesUnique = 10)
+# Prioritizr
+targetScenario <- create_fullscenario(
+  scenarioName = "Prioritizr: 2010-2060; 1 iteration; 0.5x Urbanization",
+  destinationFolder = analysisFolder,
+  dependenciesCore = coreDependencies,
+  dependenciesUnique = 11)
 
 
 
