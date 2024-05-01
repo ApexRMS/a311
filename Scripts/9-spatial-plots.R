@@ -1,4 +1,13 @@
-# Plot results
+## a311
+## Carina Rauen Firkowski 
+## April 16, 2024
+##
+## This script creates the spatial plots of the difference in habitat amount and
+## connectivity across MRC and between current and projected conditions (Fig. 4).
+
+## This script also creates a tabular summary of habitat and connectivity per MRC
+## and per scenario (see line 75).
+
 
 # Set working directory
 setwd("E:/gitprojects/a311")
@@ -63,9 +72,9 @@ for(MRCid in MRClist){
 speciesSet <- datasheet(stconnectProject, "stconnect_Species", includeKey = T)
 
 # Scenario ID
-scenarioList <- c(32, 34, 36, 38, 42)
+#scenarioList <- c(32, 34, 36, 38, 42)
 
-#scenarioID <- 32
+scenarioID <- 32
 
 # Empty dataframe for summary statistics
 habitatSummary <- data.frame(Scenario = as.character(), 
@@ -502,117 +511,3 @@ writeRaster(meanMRCDiff,
 write.csv(connectivitySummary, file = file.path(intermediatesDir, "connectivitySummary-all-difference.csv"))
 
 
-
-
-## OLD ##
-# For each species, open circuit current map
-for(speciesID in 1:14){
-  
-  # Get species code
-  speciesCode <- speciesSet[speciesID, "Code"]
-  
-  for(i in 1:10){
-    
-    # Open raster map
-    targetRaster <- rast(file.path(
-      libraryDir, 
-      "a311-stconnect-deliverable3-15Mar2024.ssim.input", 
-      paste0("Scenario-", scenarioID), 
-      "stconnect_CCOutputCumulativeCurrent",
-      paste0("cum_curmap.", speciesCode, ".it", i, ".ts2011.tif")))
-    
-    # Rename raster based on species code
-    assign(
-      x = paste0(speciesCode, "connectivity", i),
-      value = targetRaster
-    )
-    
-  }
-  
-  # Calculate mean across iterations
-  targetRaster <- mean(
-    c(eval(parse(text = paste0(speciesCode, "connectivity", 1))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 2))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 3))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 4))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 5))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 6))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 7))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 8))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 9))),
-      eval(parse(text = paste0(speciesCode, "connectivity", 10)))))
-  
-  # Rename raster based on species code
-  assign(
-    x = paste0(speciesCode, "connectivity"),
-    value = targetRaster
-  )
-  
-}
-
-# Calculate mean across species
-sppConnectivity <- mean(
-  c(RASYconnectivity, ODVIconnectivity, PELEconnectivity, LEAMconnectivity, 
-    BLBRconnectivity, SICAconnectivity, PLCIconnectivity, DRPIconnectivity, 
-    SEAUconnectivity, URAMconnectivity, STVAconnectivity, SCMIconnectivity, 
-    BUAMconnectivity, MAAMconnectivity))
-#plot(sppConnectivity)
-
-# Calculate mean per MRC
-for(MRCid in MRClist){
-  
-  # Mask probability map to MRC
-  targetRaster <- mask(sppConnectivity, 
-                       eval(parse(text = paste0("MRC", MRCid))))
-  #plot(targetRaster)
-  
-  # Calculate mean in area
-  meanValue <- mean(targetRaster[,], na.rm = TRUE)
-  
-  # Set all values to mean probability
-  targetRaster[!is.na(targetRaster)] <- meanValue
-  
-  # Set all NA values to 0
-  targetRaster[is.na(targetRaster)] <- 0
-  
-  # Rename raster based on species code
-  assign(
-    x = paste0("meanMRC", MRCid),
-    value = targetRaster
-  )
-  
-}
-
-meanMRC2011 <- c(meanMRC46 + meanMRC47 + meanMRC48 + meanMRC53 + meanMRC54 + 
-                   meanMRC55 + meanMRC56 + meanMRC57 + meanMRC58 + meanMRC59 + 
-                   meanMRC67 + meanMRC68 + meanMRC69 + meanMRC70 + meanMRC71)
-#plot(meanMRC2011)
-meanMRC2060 <- c(meanMRC46 + meanMRC47 + meanMRC48 + meanMRC53 + meanMRC54 + 
-                   meanMRC55 + meanMRC56 + meanMRC57 + meanMRC58 + meanMRC59 + 
-                   meanMRC67 + meanMRC68 + meanMRC69 + meanMRC70 + meanMRC71)
-#plot(meanMRC2060)
-
-
-meanMRCdiff <- ((meanMRC2060*100)/meanMRC2011)-100
-#plot(meanMRCdiff)
-
-# Mask
-meanMRC2011_masked <- mask(meanMRC2011, MRCraster)
-meanMRC2060_masked <- mask(meanMRC2060, MRCraster)
-meanMRCdiff_masked <- mask(meanMRCdiff, MRCraster)
-
-# Write raster with NA flag
-writeRaster(meanMRC2011_masked,
-            file.path(intermediatesDir,
-                      "connectivityPerMRC_2011.tif"),
-            NAflag = -9999, datatype = "FLT4S", overwrite = TRUE)
-writeRaster(meanMRC2060_masked,
-            file.path(intermediatesDir,
-                      "connectivityPerMRC_2060_clumpedRandom.tif"),
-            NAflag = -9999, datatype = "FLT4S", overwrite = TRUE)
-writeRaster(meanMRCdiff_masked,
-            file.path(intermediatesDir,
-                      "connectivityPerMRC_diff_clumpedRandom.tif"),
-            NAflag = -9999, datatype = "FLT4S", overwrite = TRUE)
-
-#}
