@@ -1,0 +1,16 @@
+Iteration,Timestep,StratumIDSource,StateClassIDSource,StratumIDDest,StateClassIDDest,AgeMin,AgeMax,Location
+,,,Agriculture:All,,,,,B1
+,,,Forest:Coniferous Medium,,,,,A8
+,,,Forest:Coniferous Old,,,,,A9
+,,,Forest:Coniferous Young,,,,,A7
+,,,Forest:Deciduous Medium,,,,,A2
+,,,Forest:Deciduous Old,,,,,A3
+,,,Forest:Deciduous Young,,,,,A1
+,,,Forest:Mixed Medium,,,,,A5
+,,,Forest:Mixed Old,,,,,A6
+,,,Forest:Mixed Young,,,,,A4
+,,,Road:All,,,,,D2
+,,,Urban:All,,,,,B2
+,,,Water:All,,,,,D1
+,,,Wetland:Forested,,,,,C1
+,,,Wetland:Open,,,,,C2
