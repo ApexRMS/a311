@@ -6,7 +6,7 @@
 
 
 ## This script generates a stconnect library for deliverable 3 for the complete
-## analysis, which includes 10 iterations, 50 timesteps, 14 focal species, and 
+## analysis, which includes 40 iterations, 60 timesteps, 14 focal species, and 
 ## a factorial design for 5 protected area approaches (agnostic, zonation, 
 ## prioritizr, pure random, and aggregated random) and 2 land use change rates
 ## (historic and 0.5x urbanization).
@@ -14,10 +14,10 @@
 ## The library is available to collaborators from SyncroSim Cloud at 
 ## 
 ## 
-## NOTE: In order to run this script, please review line 49 to properly setup
+## NOTE: In order to run this script, please review line 58 to properly setup
 ##       the path to the Julia software on your machine.
 ##       Additionally, the paths to input data used in this script assume the 
-##       working directory is set to "C:/gitprojects/A311". If setting a  
+##       working directory is set to "E:/gitprojects/A311". If setting a  
 ##       different working directory, make sure to update the following files:
 ##          - Initial Conditions Spatial Files.csv
 ##          - Transition Spatial Multipliers - Agnostic.csv
