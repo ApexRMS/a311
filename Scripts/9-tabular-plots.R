@@ -1,4 +1,9 @@
-# Plot results
+## a311
+## Carina Rauen Firkowski 
+## April 16, 2024
+##
+## This script creates the tabular plots presented in the report (Figs. 5 & 6).
+
 
 # Load constants
 source("Scripts/0-constants.R")
@@ -165,6 +170,7 @@ clumpedRandomHistoric_Habitat_2060 <- clumpedRandomHistoric_Habitat %>%
   summarise(Mean = mean(Proportion), Min = min(Proportion), Max = max(Proportion)) %>%
   mutate(Timestep = 2060, Scenario = "11 - Clumped random, Historic")
 
+
 # Connectivity ---------------------
 
 # 0.5x Urbanization
@@ -221,6 +227,7 @@ clumpedRandomHistoric_Connectivity_2060 <- clumpedRandomHistoric_Connectivity %>
   summarise(Mean = mean(EffectivePermeability), Min = min(EffectivePermeability), Max = max(EffectivePermeability)) %>%
   mutate(Timestep = 2060, Scenario = "11 - Clumped random, Historic")
 
+# Set label names
 labelNames <- c(
   "1 - Initial conditions" = "Initial conditions (2010)",
   "2 - Agnostic, 0.5x Urbanization" = "Agnostic, Reduced urbanization (2060)",
@@ -234,6 +241,7 @@ labelNames <- c(
   "10 - Pure random, Historic" = "Fully random, Business-as-usual (2060)",
   "11 - Clumped random, Historic" = "Clumped random, Business-as-usual (2060)")
 
+# Set break names
 breaksNames <- c(
   "1 - Initial conditions",
   "2 - Agnostic, 0.5x Urbanization",
@@ -247,7 +255,7 @@ breaksNames <- c(
   "10 - Pure random, Historic",
   "11 - Clumped random, Historic")
 
-
+# Combine results
 habitatToPlot <- rbind(Habitat_2011,
                        agnosticHistoric_Habitat_2060, 
                        agnosticLessUrban_2060,
@@ -259,7 +267,6 @@ habitatToPlot <- rbind(Habitat_2011,
                        pureRandomLessUrban_2060,
                        clumpedRandomHistoric_Habitat_2060,
                        clumpedRandomLessUrban_2060)
-
 connectivityToPlot <- rbind(Connectivity_2011,
                        agnosticHistoric_Connectivity_2060, 
                        agnosticLessUrban_Connectivity_2060,
@@ -270,36 +277,9 @@ connectivityToPlot <- rbind(Connectivity_2011,
                        pureRandomHistoric_Connectivity_2060,
                        pureRandomLessUrban_Connectivity_2060,
                        clumpedRandomHistoric_Connectivity_2060,
-                       clumpedRandomLessUrban_Connectivity_2060
-                       )
+                       clumpedRandomLessUrban_Connectivity_2060)
 
-library(ggplot2)
-
-ggplot(habitatToPlot, 
-       aes(x = factor(Scenario, levels = breaksNames), y = Mean*100)) +
-  labs(y = "Habitat amount (%)", colour = "Scenarios") +
-  geom_point(aes(colour = factor(Scenario, levels = breaksNames)), 
-             stat = "identity", show.legend = F) +
-  geom_errorbar(aes(ymin = Min*100, ymax = Max*100, 
-                   colour = factor(Scenario, levels = breaksNames)), 
-               width = 0.2, show.legend = F) +
-  scale_colour_discrete(labels = labelNames) +
-  scale_x_discrete(breaks = breaksNames) +
-  facet_wrap(~ SpeciesID, scales = "free") +
-  plotLayout
-
-ggplot(connectivityToPlot, 
-       aes(x = factor(Scenario, levels = breaksNames), y = Mean*100)) +
-  labs(y = "Effective resistance distance", colour = "Scenarios") +
-  geom_point(aes(colour = factor(Scenario, levels = breaksNames)), stat = "identity", show.legend = F) +
-  geom_errorbar(aes(ymin = Min*100, ymax = Max*100, 
-                    colour = factor(Scenario, levels = breaksNames)), 
-                width = 0.2, show.legend = F) +
-  scale_colour_discrete(labels = labelNames) +
-  scale_x_discrete(breaks = breaksNames) +
-  facet_wrap(~ SpeciesID, scales = "free") +
-  plotLayout
-
+# Set plot layout
 plotLayout <- list(theme(strip.text.x = element_text(hjust = 0, 
                                                      vjust = 1, 
                                                      size=10, 
@@ -316,3 +296,32 @@ plotLayout <- list(theme(strip.text.x = element_text(hjust = 0,
                          legend.text = element_text(size = 8),
                          panel.background = element_blank(),
                          legend.key=element_blank()))
+
+# Plot habitat amount
+ggplot(habitatToPlot, 
+       aes(x = factor(Scenario, levels = breaksNames), y = Mean*100)) +
+  labs(y = "Habitat amount (%)", colour = "Scenarios") +
+  geom_point(aes(colour = factor(Scenario, levels = breaksNames)), 
+             stat = "identity", show.legend = F) +
+  geom_errorbar(aes(ymin = Min*100, ymax = Max*100, 
+                   colour = factor(Scenario, levels = breaksNames)), 
+               width = 0.2, show.legend = F) +
+  scale_colour_discrete(labels = labelNames) +
+  scale_x_discrete(breaks = breaksNames) +
+  facet_wrap(~ SpeciesID, scales = "free") +
+  plotLayout
+
+# Plot connectivity
+ggplot(connectivityToPlot, 
+       aes(x = factor(Scenario, levels = breaksNames), y = Mean*100)) +
+  labs(y = "Effective resistance distance", colour = "Scenarios") +
+  geom_point(aes(colour = factor(Scenario, levels = breaksNames)), stat = "identity", show.legend = F) +
+  geom_errorbar(aes(ymin = Min*100, ymax = Max*100, 
+                    colour = factor(Scenario, levels = breaksNames)), 
+                width = 0.2, show.legend = F) +
+  scale_colour_discrete(labels = labelNames) +
+  scale_x_discrete(breaks = breaksNames) +
+  facet_wrap(~ SpeciesID, scales = "free") +
+  plotLayout
+
+
