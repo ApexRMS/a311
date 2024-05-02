@@ -68,7 +68,7 @@ reclassTable <- matrix(c(1, NA,    # PA
                          700, NA,   # Water
                          800, 1,      # Open wetland
                          810, 1       # Forested wetland
-                         ), ncol = 2, byrow = TRUE)
+), ncol = 2, byrow = TRUE)
 naturalAreas <- randomPAraster <- classify(LULCandPA, reclassTable)
 
 # Remove NAs from PA raster
@@ -276,6 +276,30 @@ for(i in 1:10){
   newRow <- data.frame(Iteration = i,
                        Amount = round(PAamount, 1))
   listAmount <- rbind(listAmount, newRow)
+  
+  projectedRaster <- terra::project(openRaster, currentLULC)
+  
+  # Save iteration raster to file
+  writeRaster(projectedRaster, 
+              file = file.path(intermediatesDir, "Spatial Multipliers",
+                               paste0("spatialMultiplier_aggregated_random_it", i, ".tif")),
+              overwrite = TRUE, datatype = "INT1U")
+}
+
+
+
+# Fix raster extent for clumped random -----------------------------------------
+
+for(i in 1:10){
+  openRaster <- rast(file.path(intermediatesDir, "Spatial Multipliers",
+                               paste0("aggregated_random_it", i, ".tif")))
+  
+  projectedRaster <- terra::project(openRaster, currentLULC)
+  
+  writeRaster(projectedRaster, 
+              file = file.path(intermediatesDir, "Spatial Multipliers",
+                               paste0("spatialMultiplier_aggregated_random_it", i, ".tif")),
+              overwrite = TRUE, datatype = "INT1U")
 }
 
 
@@ -312,30 +336,30 @@ while(PAcells <= maxPAcells){
   
   # Check if selected patch size is <= to max. number of PA cells
   #if(PAcells + patchSize <= maxPAcells){
-    
-    # Pick random natural pixel for patch starting location
-    firstCell <- sample(naturalPixelsID, 1)
-    # Remove cell from list
-    naturalPixelsID <- naturalPixelsID[-(match(firstCell, naturalPixelsID))]
-    
-    # Check if seed point is valid
-    if(patchyRandomPA[firstCell] != 2){
-      
-      # Create and grow patch
-      patchyRandomPA <- makeClass(patchyRandomPA, 
-                                  npatch = 1, size = patchSize, 
-                                  pts = firstCell, bgr = 1, val = 2)
-      #plot(patchyRandomPA)
-      
-      # Update number of PA cells
-      PAfreq <- as.data.frame(raster::freq(patchyRandomPA, useNA = "no"))
-      PAcells <- PAfreq$count[PAfreq$value == 2]
-      
-      cat(PAcells)
-    #} else { next }
   
-  } else { next }
+  # Pick random natural pixel for patch starting location
+  firstCell <- sample(naturalPixelsID, 1)
+  # Remove cell from list
+  naturalPixelsID <- naturalPixelsID[-(match(firstCell, naturalPixelsID))]
+  
+  # Check if seed point is valid
+  if(patchyRandomPA[firstCell] != 2){
     
+    # Create and grow patch
+    patchyRandomPA <- makeClass(patchyRandomPA, 
+                                npatch = 1, size = patchSize, 
+                                pts = firstCell, bgr = 1, val = 2)
+    #plot(patchyRandomPA)
+    
+    # Update number of PA cells
+    PAfreq <- as.data.frame(raster::freq(patchyRandomPA, useNA = "no"))
+    PAcells <- PAfreq$count[PAfreq$value == 2]
+    
+    cat(PAcells)
+    #} else { next }
+    
+  } else { next }
+  
 }
 
 #raster::plot(patchyRandomPA)
